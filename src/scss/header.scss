@@ -1,7 +1,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  padding: 20px;
 }
 
 .header__logo {
@@ -11,4 +12,8 @@
 .header__menu {
   font-size: 3.5rem;
   opacity: 0.4;
+}
+
+.header__menu:hover {
+  cursor: pointer;
 }

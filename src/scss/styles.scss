@@ -1,2 +1,6 @@
+@import "./variables";
 @import "./resetStyles";
-@import "./resetStyles";
+
+#App {
+  overflow-x: hidden;
+}

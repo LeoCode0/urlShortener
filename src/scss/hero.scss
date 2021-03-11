@@ -1,0 +1,54 @@
+@import "./variables";
+.hero {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  height: auto;
+}
+
+.hero__image-container {
+  display: block;
+  width: 100%;
+  height: 300px;
+  margin: 0 0 0 10%;
+}
+
+.hero__image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero__text-container {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.hero__description {
+  font-size: 1.6rem;
+  opacity: 0.4;
+  margin: 20px 0;
+}
+
+.hero__button {
+  background: $cyan;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  width: 170px;
+  height: 50px;
+  text-align: center;
+  vertical-align: center;
+  border: 0;
+  border-radius: 25px;
+}
+
+.hero__button:hover {
+  cursor: pointer;
+}
