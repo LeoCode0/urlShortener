@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ShortenItem } from "./ShortenItem";
+import { Statistics } from "./Statistics";
 import "../scss/shorten.scss";
 
 export const Shorten = () => {
@@ -41,6 +42,7 @@ export const Shorten = () => {
       {links.map((link) => (
         <ShortenItem rawLink={link.url} />
       ))}
+      <Statistics />
     </div>
   );
 };

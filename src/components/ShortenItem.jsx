@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../scss/shortItem.scss";
 
 export const ShortenItem = ({ rawLink }) => {
   const API = "https://api.shrtco.de/v2";

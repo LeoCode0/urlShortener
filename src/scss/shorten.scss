@@ -2,15 +2,22 @@
 
 .shorten-container {
   padding: 0 5%;
-  margin: 20px 0;
+  margin: 250px 0 20px;
+  background: rgba(gray, $alpha: 0.2);
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  position: relative;
 }
 
 .shorten {
-  width: 100%;
+  width: 90%;
   height: 170px;
   border-radius: 15px;
   text-align: center;
   background-color: $dark-violet;
+  position: absolute;
+  top: -85px;
 }
 
 .shorten__form {
