@@ -1,0 +1,57 @@
+@import "./variables";
+.title {
+  font-size: 2rem;
+  margin: 20px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.6rem;
+  opacity: 0.5;
+}
+
+.statistics__info {
+  text-align: center;
+  margin: 20px;
+}
+
+.statistics__list {
+  margin: 40px 0;
+
+  list-style: none;
+}
+
+.statistic {
+  background: #fff;
+  position: relative;
+  padding: 70px 15px 35px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.statistic__icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -28px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: $dark-violet;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+}
+
+.statistic__icon-container img {
+  height: 40px;
+  width: 40px;
+}
+
+.separator {
+  width: 10px;
+  height: 100px;
+  background-color: $cyan;
+  margin: 0 auto;
+}

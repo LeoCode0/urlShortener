@@ -1,9 +1,9 @@
 @import "./variables";
 
 .shorten-container {
-  padding: 0 5%;
+  padding: 125px 5% 30px;
   margin: 250px 0 20px;
-  background: rgba(gray, $alpha: 0.2);
+  background: $gray;
   width: 100%;
   height: auto;
   min-height: 200px;
