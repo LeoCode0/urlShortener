@@ -12,6 +12,7 @@
   "author": "Leonardo Espinoza <leocode0@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0"

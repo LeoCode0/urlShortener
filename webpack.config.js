@@ -25,6 +25,10 @@ module.exports = {
         },
       },
       {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+      {
         test: /\.html$/,
         use: [
           {
@@ -35,7 +39,7 @@ module.exports = {
       {
         test: /\.scss$/i,
         use: [
-          MiniCssExtractPlugin,
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
           },
