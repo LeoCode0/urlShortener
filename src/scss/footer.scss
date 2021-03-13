@@ -1,0 +1,125 @@
+@import "./variables";
+@import "./utilities/button";
+@import "./utilities/maxWidth";
+.boostLinks {
+  background-color: $dark-violet;
+  width: 100%;
+  height: 270px;
+}
+
+.boostLinks__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  background: url("../images/bg-boost-mobile.svg");
+  background-size: cover;
+}
+
+.boostLinks__title {
+  width: 100%;
+  font-size: 2.4rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.boostLinks__button {
+  @extend .button__cyan;
+}
+
+.footer {
+  background: $very-dark-violet;
+}
+
+.container {
+  @extend .maxWidth;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 0;
+  color: #fff;
+}
+
+.footer__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+.footer__links {
+  width: 100%;
+  text-align: center;
+  list-style-type: none;
+}
+
+.footer__links h3 {
+  font-size: 1.6rem;
+  margin: 25px 0;
+}
+
+.footer__links li {
+  margin: 25px 0;
+}
+
+.footer__links p {
+  font-size: 1.4rem;
+  color: gray;
+  margin: 10px;
+}
+
+.footer__socialMedia {
+  list-style-type: none;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .boostLinks__container {
+    background: url("../images/bg-boost-desktop.svg") no-repeat;
+    background-size: contain;
+  }
+
+  .footer {
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .footer__links {
+    width: 40%;
+    justify-content: space-around;
+    text-align: initial;
+    display: flex;
+  }
+
+  .footer__links li {
+    margin: 0;
+  }
+
+  .footer__title-container {
+    margin-right: 200px;
+  }
+
+  .footer__links li p:hover,
+  .footer__socialMedia li:hover {
+    cursor: pointer;
+    color: $cyan;
+  }
+
+  .footer__links p {
+    margin-left: 0;
+  }
+
+  .footer__links h3 {
+    margin-top: 0;
+  }
+
+  .footer__socialMedia {
+    margin-left: 20px;
+    width: 15%;
+  }
+}

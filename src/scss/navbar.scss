@@ -1,0 +1,112 @@
+@import "./variables";
+@import "./utilities/button";
+
+.navbarDesktop {
+  display: none;
+}
+
+.navbarMobile {
+  justify-content: center;
+  flex-wrap: wrap;
+  background: $dark-violet;
+  width: 80%;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.navbar__list {
+  list-style: none;
+  width: 50%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.navbar__list li {
+  margin: 20px 0;
+}
+
+.navbar__user {
+  width: 100%;
+  border-top: 1px solid $very-dark-violet;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar__login {
+  width: 100%;
+  font-size: 1.8rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.navbar__button {
+  @extend .button__cyan;
+  width: 100%;
+  margin: 0 0 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbarMobile {
+    display: none;
+  }
+
+  .navbarDesktop {
+    display: flex;
+    width: 100%;
+    padding-left: 10px;
+    justify-content: space-between;
+  }
+
+  .navbar__list {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__list li {
+    margin: 0 20px;
+    opacity: 0.8;
+    transition: all 0.3s;
+  }
+
+  .navbar__list li:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  .navbar__user {
+    width: 25%;
+    align-items: center;
+  }
+
+  .navbar__login {
+    width: max-content;
+    margin-right: 20px;
+    height: 40px;
+  }
+
+  .navbar__button {
+    width: 120px;
+    height: 40px;
+  }
+
+  .navbar__user {
+    border: 0;
+  }
+}

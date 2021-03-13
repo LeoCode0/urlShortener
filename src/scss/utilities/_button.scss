@@ -1,0 +1,17 @@
+.button__cyan {
+  background: $cyan;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  width: 170px;
+  height: 50px;
+  text-align: center;
+  border: 0;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.button__cyan:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

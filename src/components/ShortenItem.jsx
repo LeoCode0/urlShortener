@@ -12,8 +12,14 @@ export const ShortenItem = ({ rawLink }) => {
   }, []);
 
   const handleClick = () => {
-    console.log("url copy", link);
+    let helper = document.createElement("input");
+    helper.setAttribute("value", link);
+    document.body.appendChild(helper);
+    helper.select();
+    document.execCommand("copy");
+    document.body.removeChild(helper);
   };
+
   return (
     <div className="shortenItem">
       <p className="shortenItem__raw">{rawLink}</p>

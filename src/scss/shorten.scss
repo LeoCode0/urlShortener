@@ -1,8 +1,10 @@
 @import "./variables";
+@import "./utilities/button";
+@import "./utilities/maxWidth";
 
 .shorten-container {
   padding: 125px 5% 30px;
-  margin: 250px 0 20px;
+  margin: 250px 0 0;
   background: $gray;
   width: 100%;
   height: auto;
@@ -11,6 +13,7 @@
 }
 
 .shorten {
+  @extend .maxWidth;
   width: 90%;
   height: 170px;
   border-radius: 15px;
@@ -21,6 +24,9 @@
 }
 
 .shorten__form {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: inherit;
   padding: 20px;
   border-top-right-radius: 15px;
   background: url(../images/bg-shorten-mobile.svg) no-repeat top right;
@@ -36,17 +42,53 @@
   font-size: 1.8rem;
 }
 
+.shorten__error {
+  color: $red;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 70px;
+}
+
 .shorten__input[placeholder] {
   color: opacity(0.1);
 }
 
 .shorten__button {
-  background: $cyan;
-  color: #fff;
+  @extend .button__cyan;
   width: 100%;
-  height: 50px;
-  font-weight: 500;
   font-size: 2.5rem;
-  border: 0;
   border-radius: 5px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .shorten {
+    left: 0;
+    right: 0;
+    height: 130px;
+  }
+
+  .shorten__form {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/bg-shorten-desktop.svg");
+  }
+
+  .shorten__input {
+    width: 75%;
+    margin: 0;
+  }
+
+  .shorten__button {
+    margin-left: 20px;
+    margin: 0 0 0 20px;
+    width: 20%;
+  }
+
+  .shorten__error {
+    top: initial;
+    bottom: 15px;
+    left: 45px;
+  }
 }

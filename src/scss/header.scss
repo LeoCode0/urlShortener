@@ -1,4 +1,8 @@
+@import "./utilities/maxWidth";
+
 .header {
+  @extend .maxWidth;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,4 +20,15 @@
 
 .header__menu:hover {
   cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    justify-content: flex-start;
+    padding: 20px 0;
+  }
+
+  .header__menu {
+    display: none;
+  }
 }

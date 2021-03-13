@@ -4,8 +4,8 @@ import recognition from "../images/icon-brand-recognition.svg";
 import records from "../images/icon-detailed-records.svg";
 import "../scss/statistics.scss";
 
-const Statistic = ({ icon, title, text }) => (
-  <li className="statistic">
+const Statistic = ({ name, icon, title, text }) => (
+  <li className={`statistic ${name}`}>
     <div className="statistic__icon-container">
       <img src={icon} alt={title} />
     </div>
@@ -27,6 +27,7 @@ export const Statistics = () => {
       <ul className="statistics__list">
         <Statistic
           icon={recognition}
+          name="recognition"
           title="Brand Recognition"
           text="Boost your brand recognition with each click. Generic links don’t
                   mean a thing. Branded links help instil confidence in your content."
@@ -34,6 +35,7 @@ export const Statistics = () => {
         <li className="separator"></li>
         <Statistic
           icon={records}
+          name="records"
           title="Detailed Records"
           text="Gain insights into who is clicking your links. Knowing when and where
           people engage with your content helps inform better decisions."
@@ -41,6 +43,7 @@ export const Statistics = () => {
         <li className="separator"></li>
         <Statistic
           icon={customizable}
+          name="customizable"
           title="Fully Customizable"
           text="Improve brand awareness and content discoverability through customizable
                   links, supercharging audience engagement."

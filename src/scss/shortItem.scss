@@ -1,10 +1,15 @@
 @import "./variables";
+@import "./utilities/maxWidth";
+@import "./utilities/button";
 
 .shortenItem {
+  @extend .maxWidth;
+  display: flex;
+  flex-direction: column;
   background: #fff;
   font-size: 1.6rem;
   border-radius: 10px;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .shortenItem__raw {
@@ -18,12 +23,30 @@
 }
 
 .shortenItem__button {
-  margin: 0 5%;
-  width: 90%;
-  height: 45px;
-  color: #fff;
-  background-color: $cyan;
+  @extend .button__cyan;
   border-radius: 10px;
-  border: 0;
-  font-size: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .shortenItem {
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+  }
+
+  .shortenItem__raw {
+    width: 65%;
+    padding: 0 0 0 20px;
+    border: 0;
+  }
+
+  .shortenItem__short {
+    width: 20%;
+    padding: 0;
+  }
+
+  .shortenItem__button {
+    width: 150px;
+    margin: 0;
+  }
 }

@@ -1,4 +1,6 @@
 @import "./variables";
+@import "./utilities/maxWidth";
+
 .title {
   font-size: 2rem;
   margin: 20px;
@@ -22,6 +24,7 @@
 }
 
 .statistic {
+  @extend .maxWidth;
   background: #fff;
   position: relative;
   padding: 70px 15px 35px;
@@ -54,4 +57,47 @@
   height: 100px;
   background-color: $cyan;
   margin: 0 auto;
+}
+.statistics {
+  @extend .maxWidth;
+}
+
+@media screen and (min-width: 1024px) {
+  .statistics__info {
+    width: 32%;
+    margin: 0 auto;
+  }
+
+  .statistics__list {
+    display: flex;
+  }
+
+  .separator {
+    width: 50px;
+    height: 10px;
+    margin: 8% 0 0;
+  }
+
+  .statistic {
+    width: 450px;
+    height: 270px;
+    text-align: initial;
+  }
+
+  .title {
+    margin: 20px 0;
+  }
+
+  .records {
+    margin-top: 30px;
+  }
+
+  .customizable {
+    margin-top: 60px;
+  }
+
+  .statistic__icon-container {
+    left: 40px;
+    margin: 0;
+  }
 }
